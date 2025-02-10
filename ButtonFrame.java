@@ -26,6 +26,8 @@ public class ButtonFrame extends JFrame {
         JButton yellowButton = new JButton("Yellow");
         JButton blueButton = new JButton("Blue");
         JButton redButton = new JButton("Red");
+        JButton greenButton = new JButton("Green");
+        JButton pinkButton = new JButton("Pink");
 
         buttonPanel = new JPanel();
 
@@ -33,6 +35,8 @@ public class ButtonFrame extends JFrame {
         buttonPanel.add(yellowButton);
         buttonPanel.add(blueButton);
         buttonPanel.add(redButton);
+        buttonPanel.add(greenButton);
+        buttonPanel.add(pinkButton);
 
         add(buttonPanel);
 
@@ -40,12 +44,16 @@ public class ButtonFrame extends JFrame {
         ColorAction yellowAction= new ColorAction(Color.YELLOW);
         ColorAction blueAction= new ColorAction(Color.BLUE);
         ColorAction redAction = new ColorAction(Color.RED);
+        ColorAction greenAction = new ColorAction(Color.GREEN);
+        ColorAction pinkAction = new ColorAction(Color.PINK);
 
 
         // assocate action with buttons
         yellowButton.addActionListener (yellowAction);
         blueButton.addActionListener (blueAction);
         redButton.addActionListener (redAction);
+        greenButton.addActionListener (greenAction);
+        pinkButton.addActionListener (pinkAction);
  }
 
  private class ColorAction implements ActionListener {

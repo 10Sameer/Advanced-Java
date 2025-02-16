@@ -21,7 +21,7 @@ public class ButtonFrame extends JFrame {
     
     public ButtonFrame(){
         setSize(DEFAULT_HEIGHT,DEFAULT_WIDTH);
-
+    
         //create buttons
         JButton yellowButton = new JButton("Yellow");
         JButton blueButton = new JButton("Blue");

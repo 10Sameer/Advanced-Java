@@ -35,7 +35,7 @@ public class ToggleButtonBackground {
                     panel.setBackground(Color.GREEN);
                 } else {
                     JOptionPane.showMessageDialog(frame, "Enough clicking!");
-                    button.setEnabled(false); // Disable the button after third click
+                    button.setEnabled(false); 
                 }
             }
         });

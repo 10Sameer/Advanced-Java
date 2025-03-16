@@ -120,6 +120,10 @@ public class MenuFrame extends JFrame {
     }
 }
 
+// Try pressing Alt + F to open the "File" menu
+// Try pressing Alt + E to open the "Edit" menu
+// Try pressing Alt + H to open the "Help" menu
+
 
 
 

@@ -14,3 +14,15 @@ public class wish {
         label.setBounds(50, 50, 300, 50);
         frame.add(label);
 
+       
+        label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                label.setText("So I wish you to be successful and happy");
+            }
+        });
+
+        
+        frame.setVisible(true);
+    }
+}

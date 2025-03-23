@@ -53,3 +53,36 @@ public class MVCExample {
     }
 
     // Controller: Handles user input (button click) and updates the model and view
+    static class Controller {
+        private Model model;
+        private View view;
+
+        public Controller(Model model, View view) {
+            this.model = model;
+            this.view = view;
+
+            // Add ActionListener to the button
+            view.getButton().addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    model.setLabelText("Hello How are you!");  // Update model's label text
+                    view.updateLabelText(model.getLabelText());  // Update the view with the new text
+                }
+            });
+        }
+    }
+
+    // Main Program: Creates and ties together the Model, View, and Controller
+    public static void main(String[] args) {
+        // Create the model (data)
+        Model model = new Model();
+
+        // Create the view (UI)
+        View view = new View();
+
+        // Create the controller to handle events and update the model and view
+        Controller controller = new Controller(model, view);
+
+        // Display the view (open the main window)
+        view.getFrame().setVisible(true);
+    }
+}

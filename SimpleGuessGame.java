@@ -37,4 +37,34 @@ public class SimpleGuessGame extends JFrame {
         add(messageLabel, BorderLayout.NORTH);
         add(inputPanel, BorderLayout.CENTER);
 
+        // Guess button logic
+        guessButton.addActionListener(e -> {
+            try {
+                int guess = Integer.parseInt(guessField.getText());
+                if (guess == secretNumber) {
+                    JOptionPane.showMessageDialog(this, "🎉 Correct! The number was " + secretNumber);
+                    resetGame();
+                } else if (guess < secretNumber) {
+                    messageLabel.setText("Too low!");
+                } else {
+                    messageLabel.setText("Too high!");
+                }
+            } catch (NumberFormatException ex) {
+                messageLabel.setText("Enter a valid number... Cutiepiee");
+            }
+            guessField.setText("");
+        });
 
+        setVisible(true);
+    }
+
+    private void resetGame() {
+        secretNumber = new Random().nextInt(100) + 1;
+        if (messageLabel != null)
+            messageLabel.setText("Guess between 1–100");
+    }
+
+    public static void main(String[] args) {
+        new SimpleGuessGame();
+    }
+}

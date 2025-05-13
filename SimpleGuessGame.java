@@ -23,3 +23,18 @@ public class SimpleGuessGame extends JFrame {
         // Generate random number
         resetGame();
 
+        // UI Components
+        messageLabel = new JLabel("Guess between 1–100", SwingConstants.CENTER);
+        guessField = new JTextField();
+        JButton guessButton = new JButton("Guess");
+
+        // Panel for input
+        JPanel inputPanel = new JPanel(new BorderLayout());
+        inputPanel.add(guessField, BorderLayout.CENTER);
+        inputPanel.add(guessButton, BorderLayout.EAST);
+
+        // Add components
+        add(messageLabel, BorderLayout.NORTH);
+        add(inputPanel, BorderLayout.CENTER);
+
+

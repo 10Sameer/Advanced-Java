@@ -5,7 +5,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-// A frame with a sample text label and a combo box for selecting font faces.
+
+
 public class ComboBoxFrame extends JFrame{
     private JComboBox<String> faceCombo;
     private JLabel label;

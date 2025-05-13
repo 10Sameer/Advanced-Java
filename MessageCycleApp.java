@@ -26,4 +26,32 @@ public class MessageCycleApp {
         panel.add(button, BorderLayout.SOUTH);
 
         // Add action listener with click counter
-     
+        final int[] clickCount = {0};
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                clickCount[0]++;
+                switch (clickCount[0]) {
+                    case 1:
+                        messageLabel.setText("Hello");
+                        break;
+                    case 2:
+                        messageLabel.setText("How are you?");
+                        break;
+                    case 3:
+                        messageLabel.setText("I'm glad to hear you are fine.");
+                        break;
+                    case 4:
+                        messageLabel.setText("All the best cutie...");
+                        break;
+                    default:
+                        messageLabel.setText("That's all for now!");
+                        break;
+                }
+            }
+        });
+
+        // Show frame
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
